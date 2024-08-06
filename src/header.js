@@ -1,29 +1,26 @@
+import { Link } from "react-router-dom";
+
+import "./header.css"
 
 export default function Header() {
-    const navStyle = {
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
-    }
-    const navLinkStyle = {
-        textDecoration: "none",
-        marginRight: "16px",
-        color: "black",
-    }
+    const title = "BOOTCAMP Batch 10: Experiment with REACTJS";
+
     return (
         <>
-            <nav style={navStyle}>
-                <h1>BOOTCAMP Batch 10: Experiment with REACTJS</h1>
+            <nav>
+                <h1>{title}</h1>
                 <ul style={{ display:"flex", flexDirection: "row", listStyleType: "none", }}>
                     <li>
-                        <a href="/" style={navLinkStyle}>home</a>
+                        <Link to="/">home</Link>
                     </li>
                     <li>
-                        <a href="/about" style={navLinkStyle}>about</a>
+                        <Link to="/about">about</Link>
                     </li>
                     <li>
-                        <a href="/contact" style={navLinkStyle}>contact</a>
+                        <Link to="/contact">contact</Link>
+                    </li>
+                    <li>
+                        <Link to="/comment">comment</Link>
                     </li>
                 </ul>
             </nav>
