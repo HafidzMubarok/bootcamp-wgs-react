@@ -19,12 +19,12 @@ class Count extends Component{
     render() {
         return(
             <>
-                <h1>Count: {this.state.count}</h1>
+                <h1>{this.props.counterName} {this.state.count}</h1>
                 <button className="ui icon secondary button" onClick={this.minCount}>
-                    - Count
+                    {this.props.min}
                 </button>
                 <button className="ui icon primary button" onClick={this.addCount}>
-                    + Count
+                    {this.props.plus}
                 </button>
             </>
         );

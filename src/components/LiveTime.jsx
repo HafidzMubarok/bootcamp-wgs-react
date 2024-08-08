@@ -25,7 +25,7 @@ class LiveTime extends Component {
     render() {
         return (
             <>
-                <h1>{this.state.time}</h1>
+                <span>{this.state.time}</span>
             </>
         );
     }

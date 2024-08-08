@@ -1,14 +1,19 @@
 import { Link } from "react-router-dom";
+import LiveTime from "./components/LiveTime";
 
 import "./header.css"
 
 export default function Header() {
-    const title = "BOOTCAMP Batch 10: Experiment with REACTJS";
+    const title = "Experiment with REACTJS";
 
     return (
         <>
             <nav>
                 <h1>{title}</h1>
+                <div>
+                    <i aria-hidden="true" className="clock icon"></i>
+                    <LiveTime />
+                </div>
                 <ul style={{ display:"flex", flexDirection: "row", listStyleType: "none", }}>
                     <li>
                         <Link to="/">home</Link>
