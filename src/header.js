@@ -25,6 +25,9 @@ export default function Header() {
                         <Link to="/contact">contact</Link>
                     </li>
                     <li>
+                        <Link to="/gallery">gallery</Link>
+                    </li>
+                    <li>
                         <Link to="/comment">comment</Link>
                     </li>
                 </ul>

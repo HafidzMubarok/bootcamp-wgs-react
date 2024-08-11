@@ -3,6 +3,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Comment from "./components/Comment";
+import Gallery from "./components/Gallery";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function NotFound() {
@@ -21,6 +22,7 @@ export default function App() {
                         <Route path="about" element={<About />} />
                         <Route path="contact" element={<Contact />} />
                         <Route path="comment" element={<Comment />} />
+                        <Route path="gallery" element={<Gallery />} />
                         <Route path="*" element={<NotFound />} />
                     </Routes>
                 </div>

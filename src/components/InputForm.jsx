@@ -11,7 +11,7 @@ class InputForm extends Component {
     render() {
         return (
             <>
-                <label for="input">
+                <label htmlFor="input">
                     {this.props.label}:
                 </label>
                 <br />

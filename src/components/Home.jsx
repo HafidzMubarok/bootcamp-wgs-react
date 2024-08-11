@@ -1,9 +1,7 @@
 import { Component } from "react";
 import Count from "./Count";
-import SearchImages from "./SearchImages"
 
 export default class Home extends Component {
-    // const title = "Home";
     constructor(props) {
         super(props)
         this.state = {
@@ -34,19 +32,6 @@ export default class Home extends Component {
                                         min={this.state.min}
                                         plus={this.state.plus}
                                     />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="ui centered cards" style={{ paddingTop: "32px" }}>
-                        <div className="ui card">
-                            <div className="content">
-                                <div className="center aligned header">
-                                    <i className="search icon"></i>
-                                    Search Images From Unsplash
-                                </div>
-                                <div className="center aligned description" style={{ paddingTop: "16px" }}>
-                                    <SearchImages />
                                 </div>
                             </div>
                         </div>
