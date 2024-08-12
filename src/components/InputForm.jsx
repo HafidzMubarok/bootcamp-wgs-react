@@ -12,7 +12,7 @@ class InputForm extends Component {
         return (
             <>
                 <label htmlFor="input">
-                    {this.props.label}:
+                    {this.props.label}
                 </label>
                 <br />
                 <div className="ui input">

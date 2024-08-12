@@ -1,5 +1,6 @@
 import { Component } from "react";
 import Count from "./Count";
+import Comment from "./Comment";
 
 export default class Home extends Component {
     constructor(props) {
@@ -20,7 +21,7 @@ export default class Home extends Component {
                         <h1 className="ui header">{this.state.message}</h1>
                     </div>
                     <div className="ui centered cards" style={{ paddingTop: "64px" }}>
-                        <div className="ui card">
+                        <div className="card">
                             <div className="content">
                                 <div className="center aligned header">
                                     <i className="heart icon"></i>
@@ -33,6 +34,13 @@ export default class Home extends Component {
                                         plus={this.state.plus}
                                     />
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="ui centered container" style={{ paddingTop: "64px" }}>
+                        <div className="content">
+                            <div className="center aligned description" style={{ paddingTop: "16px" }}>
+                                <Comment />
                             </div>
                         </div>
                     </div>

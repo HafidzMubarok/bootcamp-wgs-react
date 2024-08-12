@@ -104,7 +104,7 @@ export default class SearchImages extends Component {
                         name={"query"}
                         handleChange={this.handleChange}
                     />
-                    <button type="submit" name="Submit" className="ui icon primary left labeled button" style={{ marginLeft: "16px" }}>
+                    <button type="submit" name="Submit" className="ui icon primary left labeled button" style={{ marginLeft: "8px" }}>
                         <i aria-hidden="true" className="search icon"></i>Search
                     </button>
                 </form>

@@ -27,8 +27,11 @@ export default function Header() {
                     <li>
                         <Link to="/gallery">gallery</Link>
                     </li>
-                    <li>
+                    {/* <li>
                         <Link to="/comment">comment</Link>
+                    </li> */}
+                    <li>
+                        <Link to="/videos">videos</Link>
                     </li>
                 </ul>
             </nav>
