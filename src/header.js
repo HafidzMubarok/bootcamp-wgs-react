@@ -9,29 +9,31 @@ export default function Header() {
     return (
         <>
             <nav>
-                <h1>{title}</h1>
+                <h1>
+                    <Link to="/"><i className="react icon"></i>{title}</Link>
+                </h1>
                 <div>
                     <i aria-hidden="true" className="clock icon"></i>
                     <LiveTime />
                 </div>
                 <ul style={{ display:"flex", flexDirection: "row", listStyleType: "none", }}>
                     <li>
-                        <Link to="/">home</Link>
+                        <Link to="/"><i className="home icon"></i>home</Link>
                     </li>
                     <li>
-                        <Link to="/about">about</Link>
+                        <Link to="/about"><i className="user icon"></i>about</Link>
                     </li>
                     <li>
-                        <Link to="/contact">contact</Link>
+                        <Link to="/contact"><i className="address book icon"></i>contact</Link>
                     </li>
                     <li>
-                        <Link to="/gallery">gallery</Link>
+                        <Link to="/gallery"><i className="images icon"></i>gallery</Link>
                     </li>
                     {/* <li>
                         <Link to="/comment">comment</Link>
                     </li> */}
                     <li>
-                        <Link to="/videos">videos</Link>
+                        <Link to="/videos"><i className="video icon"></i>videos</Link>
                     </li>
                 </ul>
             </nav>

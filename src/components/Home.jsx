@@ -24,8 +24,8 @@ export default class Home extends Component {
                         <div className="card">
                             <div className="content">
                                 <div className="center aligned header">
-                                    <i className="heart icon"></i>
-                                    Likes
+                                    Give Your Likes
+                                    <i className="heart icon" style={{ paddingLeft: "8px" }}></i>
                                 </div>
                                 <div className="center aligned description" style={{ paddingTop: "16px" }}>
                                     <Count

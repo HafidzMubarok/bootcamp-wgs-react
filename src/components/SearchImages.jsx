@@ -3,7 +3,7 @@ import axios from "axios";
 import InputForm from "./InputForm";
 import "./style/gallery.css"
 
-export default class SearchImages extends Component {
+class SearchImages extends Component {
     constructor(props) {
         super(props);
         // Initialize state to store image data, image heights, query, and loading status
@@ -41,6 +41,12 @@ export default class SearchImages extends Component {
     // Store a reference to the image element by its ID
     setImageRef = (id, element) => {
         this.imageRefs[id] = element;
+    }
+
+    setImageLoadedCount = () => {
+        this.setState(prevState => ({
+            imagesLoadedCount: prevState.imagesLoadedCount + 1 // Increment count when an image loads
+        }))
     }
 
     // Lifecycle method to detect when component updates
@@ -97,17 +103,19 @@ export default class SearchImages extends Component {
     render() {
         return (
             <>
-                <form onSubmit={this.handleSubmit}>
-                    <InputForm
-                        label={"Search Image"}
-                        type={"text"}
-                        name={"query"}
-                        handleChange={this.handleChange}
-                    />
-                    <button type="submit" name="Submit" className="ui icon primary left labeled button" style={{ marginLeft: "8px" }}>
-                        <i aria-hidden="true" className="search icon"></i>Search
-                    </button>
-                </form>
+                <div className="ui right aligned segment">
+                    <form onSubmit={this.handleSubmit}>
+                        <InputForm
+                            // label={"Search Image"}
+                            type={"text"}
+                            name={"query"}
+                            handleChange={this.handleChange}
+                            placeholder={"Search images..."}
+                            isSearchInput={true}
+                            size={"large"}
+                        />
+                    </form>
+                </div>
                 <div className="gallery-grid" style={{ paddingTop: "32px" }}>
                     {this.state.images.map(image => (
                         <div
@@ -130,3 +138,5 @@ export default class SearchImages extends Component {
         );
     }
 }
+
+export default SearchImages;

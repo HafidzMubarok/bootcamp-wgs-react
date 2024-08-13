@@ -15,14 +15,16 @@ class InputForm extends Component {
                     {this.props.label}
                 </label>
                 <br />
-                <div className="ui input">
+                <div className={`ui ${this.props.size} ${this.props.isSearchInput ? "icon" : ""} input`}>
                     <input
                         id="input"
                         type={this.props.type}
                         name={this.props.name}
                         onChange={this.props.handleChange}
+                        placeholder={this.props.placeholder}
                         required={this.props.isRequired}
                     />
+                    {this.props.isSearchInput ? <i className="inverted circular search link icon"></i> : <></>}
                 </div>
             </>
         );
