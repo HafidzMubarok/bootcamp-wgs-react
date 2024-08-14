@@ -24,20 +24,7 @@ const Videos = () => {
             setVideos(response.data.items);
             setSelectedVideo(response.data.items[0]); // Set first video as selected by default
         } catch (error) {
-            setError(
-                <div className="ui center aligned segment" style={{ padding: "64px 0px" }}>
-                    <h2 className="ui header">
-                        <h1>{error.response?.data?.error?.code}</h1>
-                        <div className="content">
-                            Error Fetching Videos
-                            <div className="sub header">Something went wrong while fetching videos from YouTube.</div>
-                        </div>
-                    </h2>
-                    <p>Error Message: {error.message}</p>
-                    <p>Reason: {error.response?.data?.error?.errors[0]?.reason}</p>
-                    <p>Error Code: {error.code}</p>
-                </div>
-            );
+            setError(<ErrorMessage error={error} />);
             setVideos([]); // Clear videos if there's an error
             console.error('Error fetching data from Youtube:', error);
         }
@@ -141,6 +128,23 @@ const IframeVideo = ({ video }) => {
         </div>
     );
 };
+
+const ErrorMessage = ({error}) => {
+    return (
+        <div className="ui center aligned segment" style={{ padding: "64px 0px" }}>
+            <h2 className="ui header">
+                <h1>{error.response?.data?.error?.code}</h1>
+                <div className="content">
+                    Error Fetching Videos
+                    <div className="sub header">Something went wrong while fetching videos from YouTube.</div>
+                </div>
+            </h2>
+            <p>Error Message: {error.message}</p>
+            <p>Reason: {error.response?.data?.error?.errors[0]?.reason}</p>
+            <p>Error Code: {error.code}</p>
+        </div>
+    );
+}
 
 export default Videos;
 

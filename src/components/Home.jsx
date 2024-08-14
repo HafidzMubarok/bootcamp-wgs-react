@@ -1,6 +1,7 @@
 import { Component } from "react";
 import Count from "./Count";
 import Comment from "./Comment";
+import { Counter } from "../features/counter/Counter";
 
 export default class Home extends Component {
     constructor(props) {
@@ -33,6 +34,18 @@ export default class Home extends Component {
                                         min={this.state.min}
                                         plus={this.state.plus}
                                     />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="ui centered cards" style={{ paddingTop: "64px" }}>
+                        <div className="card">
+                            <div className="content">
+                                <div className="center aligned header">
+                                    Another counter method with redux:
+                                </div>
+                                <div className="center aligned description" style={{ paddingTop: "16px" }}>
+                                    <Counter />
                                 </div>
                             </div>
                         </div>

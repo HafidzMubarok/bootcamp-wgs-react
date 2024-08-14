@@ -29,9 +29,12 @@ export default function Header() {
                     <li>
                         <Link to="/gallery"><i className="images icon"></i>gallery</Link>
                     </li>
-                    {/* <li>
-                        <Link to="/comment">comment</Link>
-                    </li> */}
+                    <li>
+                        <Link to="/employee">
+                            <i className="user icon"></i>
+                            employee
+                        </Link>
+                    </li>
                     <li>
                         <Link to="/videos"><i className="video icon"></i>videos</Link>
                     </li>
